@@ -1,0 +1,90 @@
+﻿body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.main-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #007a33;
+    color: white;
+    padding: 20px;
+}
+
+    .sidebar h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+    .sidebar ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+        .sidebar ul li {
+            margin: 20px 0;
+        }
+
+            .sidebar ul li a {
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+                display: block;
+            }
+
+                .sidebar ul li a:hover {
+                    text-decoration: underline;
+                }
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.overview-title {
+    color: #313030;
+    font-size: 48px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.goal-profit, .optimal-production {
+    display: inline-block;
+    text-align: center;
+    margin: 0 20px;
+}
+
+    .goal-profit h1, .optimal-production h1 {
+        color: #007a33;
+        font-size: 48px;
+        margin: 0;
+    }
+
+.excess-products, .lacking-products {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.products-list {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+    .products-list div {
+        text-align: center;
+    }
+
+        .products-list div p {
+            margin: 0;
+            font-weight: bold;
+        }

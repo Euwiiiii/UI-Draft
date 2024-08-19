@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Project1</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div class="main-container">
+        <div class="sidebar">
+            <h2>Project1</h2>
+            <ul>
+                <li><a href="#">Overview</a></li>
+                <li><a href="#">Production</a></li>
+                <li><a href="#">Ingredients</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">View Results</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>
