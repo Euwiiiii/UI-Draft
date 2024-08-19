@@ -28,19 +28,27 @@
     }
 
         .sidebar ul li {
-            margin: 20px 0;
+            margin: 24.5px 0; /* Adjusted margin to achieve 49px spacing */
         }
 
             .sidebar ul li a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 color: white;
                 text-decoration: none;
                 font-weight: bold;
-                display: block;
             }
 
-                .sidebar ul li a:hover {
-                    text-decoration: underline;
-                }
+.sidebar-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
 
 .content {
     flex-grow: 1;
