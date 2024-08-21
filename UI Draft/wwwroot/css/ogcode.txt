@@ -1,0 +1,163 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.main-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #007a33;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+    .sidebar h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+    .sidebar ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0; /* Remove extra margin */
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* Align items at the top */
+        padding-top: 216px; /* Adjust this value for spacing from the top */
+        padding-bottom: 30px; /* General padding at the bottom */
+    }
+
+        .sidebar ul li {
+            margin: 24.5px 0; /* Adjusted margin to achieve 49px spacing */
+        }
+
+            .sidebar ul li:first-child {
+                margin-top: 0; /* No extra margin at the top since we used padding */
+            }
+
+            .sidebar ul li:last-child {
+                margin-bottom: 477px; /* Adjust this value for spacing from the bottom */
+            }
+
+            .sidebar ul li a {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                color: white;
+                text-decoration: none;
+                font-weight: 500; /* SemiBold  - 600 mukhang di semi bold kapag 600 */
+                font-family: 'Open Sans', sans-serif; /* Open Sans */
+                font-size: 20px; /* 20px font size */
+                padding: 15px 30px; /* Add 30px padding to left and right */
+                text-decoration: none; /* Tanggalin ang underline */
+                transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+            }
+
+                .sidebar ul li a:hover {
+                    background-color: #005a24 !important;
+                    color: white !important;
+                    border-radius: 5px !important;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+                }
+
+
+.sidebar-icon {
+    width: 24px; /* Adjust the size of the icon */
+    height: 24px; /* Adjust the size of the icon */
+    margin-right: 10px; /* Space between the icon and text */
+}
+
+
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.overview-title {
+    color: #313030; /* Set the color as specified */
+    font-family: 'Open Sans', sans-serif; /* Use the Open Sans font */
+    font-size: 67px; /* Set the font size to 67px */
+    font-style: normal; /* Set the font style to normal */
+    font-weight: 800; /* Set the font weight to 800 (bold) */
+    line-height: normal; /* Use normal line height */
+    text-transform: uppercase; /* Make the text uppercase */
+    margin-bottom: 20px; /* Keep the margin bottom for spacing */
+    text-align: justify; /* Adjust text alignment if needed */
+}
+
+
+.profit-container {
+    display: flex;
+    justify-content: center; /* Centers the items horizontally */
+    align-items: center; /* Centers the items vertically */
+    width: 100%; /* Ensures the container takes the full width */
+    margin-top: 20px; /* Adjust if you need space from the title */
+}
+
+.goal-profit {
+    display: inline-block;
+    text-align: center;
+    width: 387px; /* Width as per Figma */
+    height: 115px; /* Height as per Figma */
+    margin-right: 50px; /* Move it slightly to the left by increasing the right margin */
+    flex-shrink: 0; /* Prevents the item from shrinking */
+}
+
+.optimal-production {
+    display: inline-block;
+    text-align: center;
+    width: 387px; /* Width as per Figma */
+    height: 115px; /* Height as per Figma */
+    margin-left: 0px; /* Move it slightly to the right by increasing the left margin */
+    flex-shrink: 0; /* Prevents the item from shrinking */
+}
+
+    .goal-profit h1, .optimal-production h1 {
+        font-size: 100px; /* Increase the font size for the main number */
+        color: #00B649; /* Ensure the color remains as specified */
+        font-family: 'Open Sans', sans-serif; /* Ensure the correct font family */
+        font-weight: 700; /* Ensure the correct font weight */
+        margin: 0;
+        text-align: center;
+    }
+
+    .goal-profit p, .optimal-production p {
+    font-size:23px; /* Increase the font size for the labels */
+    color: #1E1E1E; /* Ensure the correct color */
+    font-family: 'Open Sans', sans-serif; /* Ensure the correct font family */
+    font-weight: 600; /* Ensure the correct font weight */
+    line-height: normal; /* Keep line height normal */
+    text-align: center;
+    margin-top: 10px; /* Add space above the label */
+}
+.excess-products, .lacking-products {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.products-list {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+    .products-list div {
+        text-align: center;
+    }
+
+        .products-list div p {
+            margin: 0;
+            font-weight: bold;
+        }
