@@ -28,56 +28,45 @@ body, html {
     .sidebar ul {
         list-style-type: none;
         padding: 0;
-        margin: 0; /* Remove extra margin */
+        margin: 0;
         flex-grow: 1;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start; /* Align items at the top */
-        padding-top: 216px; /* Adjust this value for spacing from the top */
-        padding-bottom: 30px; /* General padding at the bottom */
+        justify-content: flex-start;
+        padding-top: 216px;
+        padding-bottom: 30px;
     }
 
         .sidebar ul li {
-            margin: 24.5px 0; /* Adjusted margin to achieve 49px spacing */
+            margin: 24.5px 0;
         }
-
-            .sidebar ul li:first-child {
-                margin-top: 0; /* No extra margin at the top since we used padding */
-            }
-
-            .sidebar ul li:last-child {
-                margin-bottom: 477px; /* Adjust this value for spacing from the bottom */
-            }
 
             .sidebar ul li a {
                 display: flex;
                 align-items: center;
                 justify-content: flex-start;
                 color: white;
+                font-weight: 500;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 20px;
+                padding: 15px 30px;
                 text-decoration: none;
-                font-weight: 500; /* SemiBold  - 600 mukhang di semi bold kapag 600 */
-                font-family: 'Open Sans', sans-serif; /* Open Sans */
-                font-size: 20px; /* 20px font size */
-                padding: 15px 30px; /* Add 30px padding to left and right */
-                text-decoration: none; /* Tanggalin ang underline */
-                transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+                transition: background-color 0.3s ease, color 0.3s ease;
             }
 
-                .sidebar ul li a:hover {
-                    background-color: #005a24 !important;
-                    color: white !important;
-                    border-radius: 5px !important;
-                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+                .sidebar ul li a:hover,
+                .sidebar ul li a:focus {
+                    background-color: #005a24;
+                    color: white;
+                    border-radius: 5px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
                 }
 
-
 .sidebar-icon {
-    width: 24px; /* Adjust the size of the icon */
-    height: 24px; /* Adjust the size of the icon */
-    margin-right: 10px; /* Space between the icon and text */
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
 }
-
-
 
 .content {
     flex-grow: 1;
@@ -85,62 +74,49 @@ body, html {
 }
 
 .overview-title {
-    color: #313030; /* Set the color as specified */
-    font-family: 'Open Sans', sans-serif; /* Use the Open Sans font */
-    font-size: 67px; /* Set the font size to 67px */
-    font-style: normal; /* Set the font style to normal */
-    font-weight: 800; /* Set the font weight to 800 (bold) */
-    line-height: normal; /* Use normal line height */
-    text-transform: uppercase; /* Make the text uppercase */
-    margin-bottom: 20px; /* Keep the margin bottom for spacing */
-    text-align: justify; /* Adjust text alignment if needed */
+    color: #313030;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 67px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-align: justify;
 }
-
 
 .profit-container {
     display: flex;
-    justify-content: center; /* Centers the items horizontally */
-    align-items: center; /* Centers the items vertically */
-    width: 100%; /* Ensures the container takes the full width */
-    margin-top: 20px; /* Adjust if you need space from the title */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
 }
 
-.goal-profit {
-    display: inline-block;
+.goal-profit, .optimal-production {
     text-align: center;
-    width: 387px; /* Width as per Figma */
-    height: 115px; /* Height as per Figma */
-    margin-right: 50px; /* Move it slightly to the left by increasing the right margin */
-    flex-shrink: 0; /* Prevents the item from shrinking */
-}
-
-.optimal-production {
-    display: inline-block;
-    text-align: center;
-    width: 387px; /* Width as per Figma */
-    height: 115px; /* Height as per Figma */
-    margin-left: 0px; /* Move it slightly to the right by increasing the left margin */
-    flex-shrink: 0; /* Prevents the item from shrinking */
+    width: 387px;
+    height: 115px;
+    flex-shrink: 0;
 }
 
     .goal-profit h1, .optimal-production h1 {
-        font-size: 100px; /* Increase the font size for the main number */
-        color: #00B649; /* Ensure the color remains as specified */
-        font-family: 'Open Sans', sans-serif; /* Ensure the correct font family */
-        font-weight: 700; /* Ensure the correct font weight */
+        font-size: 100px;
+        color: #00B649;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
         margin: 0;
         text-align: center;
     }
 
     .goal-profit p, .optimal-production p {
-    font-size:23px; /* Increase the font size for the labels */
-    color: #1E1E1E; /* Ensure the correct color */
-    font-family: 'Open Sans', sans-serif; /* Ensure the correct font family */
-    font-weight: 600; /* Ensure the correct font weight */
-    line-height: normal; /* Keep line height normal */
-    text-align: center;
-    margin-top: 10px; /* Add space above the label */
-}
+        font-size: 23px;
+        color: #1E1E1E;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        line-height: normal;
+        text-align: center;
+        margin-top: 10px;
+    }
+
 .excess-products, .lacking-products {
     text-align: center;
     margin-top: 40px;

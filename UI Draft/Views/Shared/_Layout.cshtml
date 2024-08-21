@@ -14,30 +14,31 @@
             <h2>Product Optimization</h2>
             <ul> 
                 <li>
-                    <a href="#">
+                    <a href="#" class="@((ViewData["ActivePage"] as string == "Overview") ? "active" : "")">
                         <img src="~/images/overview-icon.png" alt="Overview Icon" class="sidebar-icon" />
                         Overview
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="#" class="@((ViewData["ActivePage"] as string == "Production") ? "active" : "")">
                         <img src="~/images/production-icon.png" alt="Production Icon" class="sidebar-icon" />
                         Production
                     </a>
                      </li>
                 <li>
-                    <a href="#">
-                        <img src="~/images/ingredients-icon.png" alt="Production Icon" class="sidebar-icon" />
+                    <a href="#" class="@((ViewData["ActivePage"] as string == "Ingredients") ? "active" : "")">
+                        <img src="~/images/ingredients-icon.png" alt="Ingredients Icon" class="sidebar-icon" />
                         Ingredients
                     </a>
                 </li>
-                <li><a href="#">
-                      <img src="~/images/products-icon.png" alt="Production Icon" class="sidebar-icon" /> 
+                <li><a href="#"class="@((ViewData["ActivePage"] as string == "Products") ? "active" : "")">
+                      <img src="~/images/products-icon.png" alt="Products Icon" class="sidebar-icon" /> 
                     Products
                     </a>
                     </li>
-                <li><a href="#">
-                    <img src="~/images/view-result-icon.png" alt="Production Icon" class="sidebar-icon" /> 
+                <li>
+                    <a href="#" class="@((ViewData["ActivePage"] as string == "View-result") ? "active" : "")">
+                    <img src="~/images/view-result-icon.png" alt="View-result Icon" class="sidebar-icon" /> 
                     View Results
                     </a>
                     </li>
@@ -47,5 +48,18 @@
             @RenderBody()
         </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var sidebarLinks = document.querySelectorAll('.sidebar ul li a');
+            sidebarLinks.forEach(function (link) {
+                link.addEventListener('click', function () {
+                    sidebarLinks.forEach(function (link) {
+                        link.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
