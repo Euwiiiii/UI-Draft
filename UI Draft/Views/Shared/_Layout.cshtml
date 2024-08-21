@@ -1,65 +1,50 @@
 ﻿<!DOCTYPE html>
- <! -- for side task bar ito --->
-
-<html lang="en">
+<html>
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Product Optimization</title>
-    <link rel="stylesheet" href="~/css/site.css" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/Css/site.css" />
 </head>
 <body>
     <div class="main-container">
         <div class="sidebar">
             <h2>Product Optimization</h2>
-            <ul> 
+            <ul>
                 <li>
-                    <a href="#" class="@((ViewData["ActivePage"] as string == "Overview") ? "active" : "")">
+                    <a href="@Url.Action("Index", "Overview")" class="@((ViewData["ActivePage"] as string == "Overview") ? "active" : "")">
                         <img src="~/images/overview-icon.png" alt="Overview Icon" class="sidebar-icon" />
                         Overview
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="@((ViewData["ActivePage"] as string == "Production") ? "active" : "")">
+                    <a href="@Url.Action("Index", "Production")" class="@((ViewData["ActivePage"] as string == "Production") ? "active" : "")">
                         <img src="~/images/production-icon.png" alt="Production Icon" class="sidebar-icon" />
                         Production
                     </a>
-                     </li>
+                </li>
                 <li>
-                    <a href="#" class="@((ViewData["ActivePage"] as string == "Ingredients") ? "active" : "")">
+                    <a href="@Url.Action("Index", "Ingredients")" class="@((ViewData["ActivePage"] as string == "Ingredients") ? "active" : "")">
                         <img src="~/images/ingredients-icon.png" alt="Ingredients Icon" class="sidebar-icon" />
                         Ingredients
                     </a>
                 </li>
-                <li><a href="#"class="@((ViewData["ActivePage"] as string == "Products") ? "active" : "")">
-                      <img src="~/images/products-icon.png" alt="Products Icon" class="sidebar-icon" /> 
-                    Products
-                    </a>
-                    </li>
                 <li>
-                    <a href="#" class="@((ViewData["ActivePage"] as string == "View-result") ? "active" : "")">
-                    <img src="~/images/view-result-icon.png" alt="View-result Icon" class="sidebar-icon" /> 
-                    View Results
+                    <a href="@Url.Action("Index", "Products")" class="@((ViewData["ActivePage"] as string == "Products") ? "active" : "")">
+                        <img src="~/images/products-icon.png" alt="Products Icon" class="sidebar-icon" />
+                        Products
                     </a>
-                    </li>
+                </li>
+                <li>
+                    <a href="@Url.Action("Index", "ViewResults")" class="@((ViewData["ActivePage"] as string == "ViewResults") ? "active" : "")">
+                        <img src="~/images/view-result-icon.png" alt="View Results Icon" class="sidebar-icon" />
+                        View Results
+                    </a>
+                </li>
             </ul>
         </div>
         <div class="content">
             @RenderBody()
         </div>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var sidebarLinks = document.querySelectorAll('.sidebar ul li a');
-            sidebarLinks.forEach(function (link) {
-                link.addEventListener('click', function () {
-                    sidebarLinks.forEach(function (link) {
-                        link.classList.remove('active');
-                    });
-                    this.classList.add('active');
-                });
-            });
-        });
-    </script>
 </body>
 </html>
