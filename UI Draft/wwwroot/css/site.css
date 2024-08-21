@@ -56,19 +56,19 @@
                 /* CSS for hover effect huhuuhuhuhuh */
                 .sidebar ul li a:hover,
                 .sidebar ul li a:focus {
-                    background-color: #005a24;
+                    background-color: #00B649;
                     color: white;
                     border-radius: 5px;
                     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
                 }
 
                 /* CSS for active link */
-                .sidebar ul li a.active {
-                    background-color: #004d1a; /* Slightly darker shade for active state */
-                    color: white;
-                    border-radius: 5px;
-                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-                }
+.sidebar ul li a.active {
+    background-color: #004d1a; /* Slightly darker shade for active state */
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 .sidebar-icon {
     width: 24px;
     height: 24px;
